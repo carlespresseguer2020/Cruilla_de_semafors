@@ -6,17 +6,19 @@
 **********************************************************************************/
 //********** Includes *************************************************************
 //********** Variables ************************************************************
-const int LEDR1 = 11;          // donar nom al pin 5 de l’Arduino
-const int LEDR2 = 10;          // donar nom al pin 6 de l’Arduino
-const int LEDG1 = 9;          // donar nom al pin 7 de l’Arduino
-const int LEDG2 = 8;          // donar nom al pin 8 de l’Arduino
-const int LEDV1 = 7;          // donar nom al pin 9 de l’Arduino
-const int LEDV2 = 6;         // donar nom al pin 10 de l’Arduino
+const int G = 11;
+const int F = 12;          // donar nom al pin 5 de l’Arduino
+const int E = 10;          // donar nom al pin 6 de l’Arduino
+const int D = 9;          // donar nom al pin 7 de l’Arduino
+const int C = 8;          // donar nom al pin 8 de l’Arduino
+const int B = 7;          // donar nom al pin 9 de l’Arduino
+const int A = 6;         // donar nom al pin 10 de l’Arduino
 
-unsigned int temps = 500;
+unsigned int temps = 1000;
 //********** Setup ****************************************************************
 void setup()
 {
+  pinMode(12, OUTPUT);
   pinMode(11, OUTPUT);
   pinMode(10, OUTPUT);
   pinMode(9, OUTPUT);
@@ -28,61 +30,66 @@ void setup()
 void loop()
 
 {
-  digitalWrite(LEDR1, HIGH);
-  digitalWrite(LEDG1, LOW);
-  digitalWrite(LEDV1, LOW);
-  digitalWrite(LEDR2, HIGH);
-  digitalWrite(LEDG2, LOW);
-  digitalWrite(LEDV2, LOW);
-    delay(temps);
-
-  digitalWrite(LEDR1, HIGH);
-  digitalWrite(LEDG1, LOW);
-  digitalWrite(LEDV1, LOW);
-  digitalWrite(LEDR2, LOW);
-  digitalWrite(LEDG2, LOW);
-  digitalWrite(LEDV2, HIGH);
-    delay(4*temps);
-
-  digitalWrite(LEDR1, HIGH);
-  digitalWrite(LEDG1, LOW);
-  digitalWrite(LEDV1, LOW);
-  digitalWrite(LEDR2, LOW);
-  digitalWrite(LEDG2, HIGH);
-  digitalWrite(LEDV2, LOW);
+  //lletra C
+  digitalWrite(A, HIGH);
+  digitalWrite(B, LOW);
+  digitalWrite(C, LOW);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, LOW);
   delay(temps);
 
-  digitalWrite(LEDR1, HIGH);
-  digitalWrite(LEDG1, LOW);
-  digitalWrite(LEDV1, LOW);
-  digitalWrite(LEDR2, HIGH);
-  digitalWrite(LEDG2, LOW);
-  digitalWrite(LEDV2, LOW);
+  //lletra A
+  digitalWrite(A, HIGH);
+  digitalWrite(B, HIGH);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, LOW);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
+  delay(temps);
+
+  //lletra R
+  digitalWrite(A, LOW);
+  digitalWrite(B, LOW);
+  digitalWrite(C, LOW);
+  digitalWrite(D, LOW);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, LOW);
+  digitalWrite(G, HIGH);
+  delay(temps);
+
+  //lletra L
+  digitalWrite(A, LOW);
+  digitalWrite(B, LOW);
+  digitalWrite(C, LOW);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, LOW);
+  delay(temps);
+
+  //lletra E
+  digitalWrite(A, HIGH);
+  digitalWrite(B, LOW);
+  digitalWrite(C, LOW);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
+  delay(temps);
+
+  //lletra S
+  digitalWrite(A, HIGH);
+  digitalWrite(B, LOW);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, LOW);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
   delay(temps);
   
-  digitalWrite(LEDR1, LOW);
-  digitalWrite(LEDG1, LOW);
-  digitalWrite(LEDV1, HIGH);
-  digitalWrite(LEDR2, HIGH);
-  digitalWrite(LEDG2, LOW);
-  digitalWrite(LEDV2, LOW);
-  delay(4*temps);
-
-  digitalWrite(LEDR1, LOW);
-  digitalWrite(LEDG1, HIGH);
-  digitalWrite(LEDV1, LOW);
-  digitalWrite(LEDR2, HIGH);
-  digitalWrite(LEDG2, LOW);
-  digitalWrite(LEDV2, LOW);
-  delay(temps);
-
-  digitalWrite(LEDR1, HIGH);
-  digitalWrite(LEDG1, LOW);
-  digitalWrite(LEDV1, LOW);
-  digitalWrite(LEDR2, HIGH);
-  digitalWrite(LEDG2, LOW);
-  digitalWrite(LEDV2, LOW);
-  delay(temps);
 }
  
 //********** Funcions *************************************************************
